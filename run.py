@@ -15,7 +15,7 @@ if __name__ == "__main__":
     resultExistZip = db.checkExistNameZip(name_zip)
     
     if(resultExistZip):
-        ftp = FtpService('192.168.87.128', 'ftp_backup', 'Qwerty')
+        ftp = FtpService('localhost', 'UserTest', 'PasswordTest')
         ftp.sendFile(path + name_zip)
         db.setAsSentBackup(name_zip)
         print("Envio realizado.")
